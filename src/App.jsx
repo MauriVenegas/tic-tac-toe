@@ -5,6 +5,7 @@ import { TURNS } from './constant.js'
 import { checkWinnerFrom, checkEndGaame } from './logic/board.js'
 import WinnerModal from './components/WinnerModal.jsx'
 import { resetGameToStorage, saveGameToStorage } from './logic/storage/index.js'
+import MouseFollower from './components/MouseFollower.jsx'
 
 function App() {
   // El useState no puede estar dentro de un if por lo cual si es necesario usar un if se hace de la siguiente manera
@@ -55,6 +56,7 @@ function App() {
     <main className="board">
       <h1>Tic tac toe</h1>
       <button onClick={resetGame}>Empezar de nuevo</button>
+      <MouseFollower />
 
       <section className="game">
         {board.map((square, index) => {
