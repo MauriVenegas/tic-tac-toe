@@ -1,4 +1,4 @@
-import { Square } from '../components/Square.jsx'
+import { Square } from './Square.jsx'
 // eslint-disable-next-line react/prop-types
 export default function WinnerModal({ winner, resetGame }) {
   if (winner === null) return null
